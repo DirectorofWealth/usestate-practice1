@@ -7,6 +7,9 @@ import Counter from './components/Counter'
 import AddTwo from './components/AddTwo'
 import ToggleDark from './components/ToggleDark'
 import DelayedCounter from './components/DelayedCounter'
+import IntervalCounter from './components/IntervalCounter'
+import TodoList from './components/TodoList'
+import ProfileForm from './components/ProfileForm'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,7 +20,10 @@ function App() {
     {/* <Counter /> */}
     {/* <AddTwo /> */}
     {/* <ToggleDark /> */}
-    <DelayedCounter />
+    {/* <DelayedCounter /> */}
+    {/* <IntervalCounter /> */}
+    {/* <TodoList /> */}
+    <ProfileForm />
      
     </>
   )
