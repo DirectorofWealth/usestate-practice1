@@ -15,6 +15,15 @@ const [text, setText] = useState("");
         setTodos((prev) => prev.filter((todo) => todo.id !== idToDelete));
     }
 
+
+    const toggleDone = (id) => {
+        setTodos((prev) => prev.map((todo) =>
+                todo.id === id ? { ...todo, done: !todo.done } : todo
+            )
+        );
+       };
+
+
     return(
         <>
        <div className="flex justify-center">
@@ -44,7 +53,12 @@ const [text, setText] = useState("");
                     {todos.map((todo) =>(
                         <div key={todo.id} 
                         className="flex items-center justify-between bg-white border border-gray-100 p-3 rounded shadow-sm text-gray-700">
-                            <span>{todo.title}</span>
+                            <span
+                                onClick={() => toggleDone(todo.id)}
+                                className={`cursor-pointer select-none transition-all duration-200 flex-1 py-1 ${
+                                    todo.done ? "line-through text-gray-400 italic" : "text-gray-800 font-medium"
+                                }`}
+                            >{todo.title}</span>
                             
                             <div>
                             <button
