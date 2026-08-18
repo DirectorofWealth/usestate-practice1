@@ -4,6 +4,8 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import Counter from './components/Counter'
+import AddTwo from './components/AddTwo'
+import ToggleDark from './components/ToggleDark'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +13,9 @@ function App() {
   return (
     <>
 
+    {/* <Counter /> */}
+    {/* <AddTwo /> */}
+    <ToggleDark />
      
     </>
   )
