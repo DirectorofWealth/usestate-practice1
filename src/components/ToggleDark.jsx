@@ -9,9 +9,13 @@ function ToggleDark(){
 };
 
     return(
-        <div>
-            <div className="">
-                <nav className="flex flex-row shadow-sm justify-around items-center py-5">
+        <div className={`min-h-screen transition-colors duration-300 ${
+            isDark ? 'bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-900'
+          }`}>
+            <div>
+                <nav className={`flex flex-row shadow-sm justify-around items-center py-5 border-b transition-colors duration-300 ${
+                isDark ? 'bg-gray-900 border-gray-800 shadow-gray-100/15 text-blue-200' : 'bg-white border-gray-100'
+                }`}>
                     <div>Logo</div>
                     <div className="flex flex-row gap-15 justify-evenly">
                         <div>Home</div>
@@ -27,7 +31,7 @@ function ToggleDark(){
                          ease-in-out hover:-translate-y-1 hover:scale-105 
                          active:scale-95 active:translate-y-0"
                     >
-                        {isDark ? 'Light Mode' : 'Dark Mode'}
+                        {isDark ? '☀️ Light Mode' : '🌙 Dark Mode'}
                     </button>
 
                     </div>
