@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Counter from './components/Counter'
 import AddTwo from './components/AddTwo'
+import ToggleDark from './components/ToggleDark'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +14,8 @@ function App() {
     <>
 
     {/* <Counter /> */}
-    <AddTwo />
+    {/* <AddTwo /> */}
+    <ToggleDark />
      
     </>
   )
