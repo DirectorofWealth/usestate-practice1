@@ -22,6 +22,11 @@ function IntervalCounter(){
         setId(null);
     };
 
+    const reset = () => {
+        clearInterval(0);
+        setId(null)
+        setSeconds(0)
+    }
 
     return (
 
@@ -45,6 +50,13 @@ function IntervalCounter(){
                 >
                     Stop
                 </button>
+                <button 
+                    onClick={reset} 
+                    className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 rounded-3xl font-medium transition-colors"
+                >
+                    Reset
+                </button>
+
             </div>
         </div>
         
