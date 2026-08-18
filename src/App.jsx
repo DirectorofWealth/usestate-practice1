@@ -6,6 +6,7 @@ import './App.css'
 import Counter from './components/Counter'
 import AddTwo from './components/AddTwo'
 import ToggleDark from './components/ToggleDark'
+import DelayedCounter from './components/DelayedCounter'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,7 +16,8 @@ function App() {
 
     {/* <Counter /> */}
     {/* <AddTwo /> */}
-    <ToggleDark />
+    {/* <ToggleDark /> */}
+    <DelayedCounter />
      
     </>
   )
